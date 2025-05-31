@@ -1,198 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>🔥 Real Adult Site</title>
-<style>
-  body {
-    background: #121212;
-    color: #eee;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0; padding: 0;
-  }
-  header {
-    background: #000;
-    padding: 15px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 1.5px;
-  }
-  .banner-ad {
-    text-align: center;
-    margin: 10px auto;
-    max-width: 728px;
-    height: 90px;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-    gap: 12px;
-    padding: 15px;
-  }
-  .item {
-    background: #1f1f1f;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 0 8px rgba(255 255 255 / 0.1);
-    transition: transform 0.2s ease;
-    position: relative;
-  }
-  .item:hover {
-    transform: scale(1.05);
-  }
-  .thumb {
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
-    display: block;
-  }
-  .title {
-    padding: 8px 6px 4px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .meta {
-    font-size: 11px;
-    color: #aaa;
-    padding: 0 6px 8px;
-  }
-  .views {
-    font-size: 11px;
-    color: #999;
-    padding: 0 6px 8px;
-  }
-  .animated-overlay {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 50px;
-    height: 50px;
-    pointer-events: none;
-    border-radius: 8px;
-  }
-  .native-ad-container {
-    max-width: 728px;
-    margin: 20px auto;
-    background: #222;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-  }
 
-  /* Mobile friendly tweaks */
-  @media (max-width: 480px) {
-    header {
-      font-size: 20px;
-      padding: 12px;
-    }
-    .grid {
-      grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
-      gap: 10px;
-      padding: 10px;
-    }
-    .thumb {
-      height: 90px;
-    }
-    .title {
-      font-size: 13px;
-      padding: 6px 4px 3px;
-    }
-    .meta, .views {
-      font-size: 10px;
-      padding: 0 4px 6px;
-    }
-    .animated-overlay {
-      width: 40px;
-      height: 40px;
-      top: 5px;
-      right: 5px;
-    }
-  }
-</style>
-</head>
-<body>
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.text = `
+        atOptions = {
+          'key' : '${bannerAdKey}',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      `;
+      bannerAdContainer.appendChild(script);
 
-<header>🔥 Real Adult Site 🔞</header>
+      // Add ad invoke script
+      const invokeScript = document.createElement('script');
+      invokeScript.type = 'text/javascript';
+      invokeScript.src = "//www.highperformanceformat.com/" + bannerAdKey + "/invoke.js";
+      bannerAdContainer.appendChild(invokeScript);
+    }
 
-<!-- Banner Ad -->
-<div class="banner-ad" id="banner-ad">
-  <script type="text/javascript">
-    atOptions = {
-      'key' : '157245f0ba4b490a6dfe90167dc90667',
-      'format' : 'iframe',
-      'height' : 90,
-      'width' : 728,
-      'params' : {}
-    };
+    // Initial load
+    loadBannerAd();
+
+    // Reload banner ad every 5 seconds
+    setInterval(loadBannerAd, 5000);
   </script>
-  <script type="text/javascript" src="//www.highperformanceformat.com/157245f0ba4b490a6dfe90167dc90667/invoke.js"></script>
-</div>
 
-<!-- Video Grid -->
-<div class="grid" id="video-grid">
+  <!-- Popunder Ad Every 3 Seconds -->
+  <script>
+    function loadPopunderAd() {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = popunderScriptUrl + '?_=' + new Date().getTime(); // prevent caching
+      document.body.appendChild(script);
 
-  <div class="item">
-    <img class="thumb" src="https://cdn.pixabay.com/photo/2016/11/22/19/07/girl-1852929_960_720.jpg" alt="Hot Girl Next Door" />
-    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Animated Overlay" class="animated-overlay" />
-    <div class="title">Hot Girl Next Door</div>
-    <div class="meta">8:21 | Amateur</div>
-    <div class="views">1.2M views</div>
-  </div>
+      // Clean up old popunder scripts to avoid memory leaks or multiple executions
+      setTimeout(() => {
+        document.body.removeChild(script);
+      }, 5000); // remove after 5 sec
+    }
 
-  <div class="item">
-    <img class="thumb" src="https://cdn.pixabay.com/photo/2017/06/20/18/44/beautiful-2421345_960_720.jpg" alt="Steamy Shower Fun" />
-    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Animated Overlay" class="animated-overlay" />
-    <div class="title">Steamy Shower Fun</div>
-    <div class="meta">12:47 | Teen</div>
-    <div class="views">953K views</div>
-  </div>
+    // Run popunder every 3 seconds
+    setInterval(loadPopunderAd, 3000);
 
-  <div class="item">
-    <img class="thumb" src="https://cdn.pixabay.com/photo/2016/03/27/19/42/woman-1284414_960_720.jpg" alt="Office Tease" />
-    <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Animated Overlay" class="animated-overlay" />
-    <div class="title">Office Tease</div>
-    <div class="meta">6:05 | MILF</div>
-    <div class="views">621K views</div>
-  </div>
-
-  <div class="item">
-    <img class="thumb" src="https://cdn.pixabay.com/photo/2017/05/10/18/35/girl-2306302_960_720.jpg" alt="Late Night Confession" />
-    <div class="title">Late Night Confession</div>
-    <div class="meta">9:32 | Romantic</div>
-    <div class="views">1.8M views</div>
-  </div>
-
-  <div class="item">
-    <img class="thumb" src="https://cdn.pixabay.com/photo/2016/11/29/06/11/woman-1867093_960_720.jpg" alt="Poolside Secrets" />
-    <div class="title">Poolside Secrets</div>
-    <div class="meta">7:44 | Outdoor</div>
-    <div class="views">788K views</div>
-  </div>
-
-  <div class="item">
-    <img class="thumb" src="https://cdn.pixabay.com/photo/2017/06/25/20/51/woman-2443624_960_720.jpg" alt="After Hours Seduction" />
-    <div class="title">After Hours Seduction</div>
-    <div class="meta">10:11 | Mature</div>
-    <div class="views">2.3M views</div>
-  </div>
-
-</div>
-
-<!-- Native Ads container -->
-<div class="native-ad-container" id="native-ad-container">
-  <script async="async" data-cfasync="false" src="//pl26794854.profitableratecpm.com/375e4b3eba75fb8f1dcd8c7000621946/invoke.js"></script>
-  <div id="container-375e4b3eba75fb8f1dcd8c7000621946"></div>
-</div>
-
-<!-- Popunder ads script -->
-<script type='text/javascript' src='//pl26796457.profitableratecpm.com/fa/30/bc/fa30bc57a51b9462be4054b891790f62.js'></script>
+    // Optional: load one immediately on page load
+    loadPopunderAd();
+  </script>
 
 </body>
 </html>

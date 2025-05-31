@@ -38,6 +38,7 @@
       cursor: pointer;
       box-shadow: 0 0 8px rgba(255 255 255 / 0.1);
       transition: transform 0.2s ease;
+      position: relative;
     }
     .item:hover {
       transform: scale(1.05);
@@ -66,6 +67,15 @@
       font-size: 12px;
       color: #999;
       padding: 0 8px 10px;
+    }
+    .animated-overlay {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 60px;
+      height: 60px;
+      pointer-events: none;
+      border-radius: 8px;
     }
     .native-ad-container {
       max-width: 728px;
@@ -97,38 +107,47 @@
 
 <!-- Video Grid -->
 <div class="grid" id="video-grid">
+
   <div class="item">
-    <img class="thumb" src="https://picsum.photos/320/180?random=1" alt="Hot Girl Next Door" />
+    <img class="thumb" src="https://via.placeholder.com/320x180.png?text=Hot+Girl+Next+Door" alt="Hot Girl Next Door" />
+    <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="Animated Overlay" class="animated-overlay" />
     <div class="title">Hot Girl Next Door</div>
     <div class="meta">8:21 | Amateur</div>
     <div class="views">1.2M views</div>
   </div>
+
   <div class="item">
-    <img class="thumb" src="https://picsum.photos/320/180?random=2" alt="Steamy Shower Fun" />
+    <img class="thumb" src="https://via.placeholder.com/320x180.png?text=Steamy+Shower+Fun" alt="Steamy Shower Fun" />
+    <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Animated Overlay" class="animated-overlay" />
     <div class="title">Steamy Shower Fun</div>
     <div class="meta">12:47 | Teen</div>
     <div class="views">953K views</div>
   </div>
+
   <div class="item">
-    <img class="thumb" src="https://picsum.photos/320/180?random=3" alt="Office Tease" />
+    <img class="thumb" src="https://via.placeholder.com/320x180.png?text=Office+Tease" alt="Office Tease" />
+    <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Animated Overlay" class="animated-overlay" />
     <div class="title">Office Tease</div>
     <div class="meta">6:05 | MILF</div>
     <div class="views">621K views</div>
   </div>
+
   <div class="item">
-    <img class="thumb" src="https://picsum.photos/320/180?random=4" alt="Late Night Confession" />
+    <img class="thumb" src="https://via.placeholder.com/320x180.png?text=Late+Night+Confession" alt="Late Night Confession" />
     <div class="title">Late Night Confession</div>
     <div class="meta">9:32 | Romantic</div>
     <div class="views">1.8M views</div>
   </div>
+
   <div class="item">
-    <img class="thumb" src="https://picsum.photos/320/180?random=5" alt="Poolside Secrets" />
+    <img class="thumb" src="https://via.placeholder.com/320x180.png?text=Poolside+Secrets" alt="Poolside Secrets" />
     <div class="title">Poolside Secrets</div>
     <div class="meta">7:44 | Outdoor</div>
     <div class="views">788K views</div>
   </div>
+
   <div class="item">
-    <img class="thumb" src="https://picsum.photos/320/180?random=6" alt="After Hours Seduction" />
+    <img class="thumb" src="https://via.placeholder.com/320x180.png?text=After+Hours+Seduction" alt="After Hours Seduction" />
     <div class="title">After Hours Seduction</div>
     <div class="meta">10:11 | Mature</div>
     <div class="views">2.3M views</div>
@@ -142,7 +161,7 @@
 </div>
 
 <!-- Popunder ads script -->
-<script type='text/javascript' src='//pl26796457.profitableratecpm.com/fa/30/bc/fa30bc57a51b9462be4054b891790f62.js'></script>
+<script type='text/javascript' src='//pl26796457.profitableratecpm.com/fa/30/bc/fa30bc57a51b9462be4054a891790f62.js'></script>
 
 </body>
 </html>
